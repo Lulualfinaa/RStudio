@@ -1,0 +1,28 @@
+data_lulu = read.csv("C:/Prak Statistika/dataPrak1.csv")
+View(data_lulu)
+
+Lulu<-data_lulu[data_lulu$tinggi.badan==166,]
+View(Lulu)
+
+data_lulu$tinggi.badan<-ifelse(data_lulu$tinggi.badan > 160,c("tinggi"),c("pendek"))
+View(data_lulu)
+data_lulu$Jurusan <- c("Infor20")
+data_lulu$Fakultas <- c("FTI")
+View(data_lulu)
+data_lulu$Fakultas<-NULL
+View(data_lulu)
+
+data_lulu.kolom1dan2 <- data_lulu[,1:2] 
+View(data_lulu.kolom1dan2)
+data_lulu.kolom3dan4 <- data_lulu[,3:4] 
+View(data_lulu.kolom3dan4)
+data_lulu.kolom1sd4<-cbind(data_lulu.kolom1dan2, data_lulu.kolom3dan4) 
+View(data_lulu.kolom1sd4)
+
+data_lulu.baris1sd5 <- data_lulu[1:5,] 
+data_lulu.baris25sd30 <- data_lulu[25:30,] 
+data_lulu.baris1sd30 <- rbind(data_lulu.baris1sd5, data_lulu.baris25sd30) 
+View(data_lulu.baris1sd30)
+
+data_lulu.sort<-data_lulu[order(data_lulu$waktu.perjalanan),] 
+View(data_lulu.sort)
