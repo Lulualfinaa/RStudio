@@ -1,0 +1,5 @@
+Lulu= read.delim("clipboard")
+View(Lulu)
+str(Lulu)
+mean(Lulu$penghasilan)
+t.test(Lulu$penghasilan, mu=14500)
