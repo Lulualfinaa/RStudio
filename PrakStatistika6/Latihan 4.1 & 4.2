@@ -1,0 +1,16 @@
+DirectMarketing= read.csv("C:/Users/lulualfina15/Downloads/DirectMarketing.csv")
+DirectMarketing= read.delim("C:/Users/lulualfina15/Downloads/DirectMarketing.csv", sep=";")
+#histogram
+hist(DirectMarketing$AmountSpent)
+#density
+d=density(DirectMarketing$AmountSpent)
+plot(d)
+
+
+install.packages("ggplot2")
+library(ggplot2)
+houseprice=read.csv("C:/Users/lulualfina15/Downloads/houseprice.csv")
+houseprice=read.delim("C:/Users/lulualfina15/Downloads/houseprice.csv", sep=";")
+#scatterplot
+qplot(houseprice$Price,houseprice$SqFt)
+plot(houseprice$Price,houseprice$SqFt)
